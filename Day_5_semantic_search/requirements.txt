@@ -1,0 +1,45 @@
+sentence-transformers
+scikit-learn
+numpy
+pandas
+ipykernel
+
+
+# sentence-transformers → convert sentences into embeddings
+# scikit-learn         → cosine similarity
+# numpy                → vector/matrix handling
+# pandas               → display results
+# ipykernel            → run Jupyter notebooks in VS Code
+
+# understanding the flow 
+
+#                DATASET
+#                   │
+#              20 Sentences
+#                   │
+#                   ▼
+#          SentenceTransformer
+#                   │
+#                   ▼
+#          Sentence Embeddings
+#            (20 × 384)
+#                   │
+#                   │
+#                   │
+# User Query ────────────────┐
+#                            │
+#                            ▼
+#                   Query Embedding
+#                      (1 × 384)
+#                            │
+#                            ▼
+#                   Cosine Similarity
+#                            │
+#                            ▼
+#                  20 Similarity Scores
+#                            │
+#                            ▼
+#                      Sort Scores
+#                            │
+#                            ▼
+#                      TOP 3 RESULTS
